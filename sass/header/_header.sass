@@ -1,0 +1,120 @@
+.menu
+    padding: 52px 0 41px 0
+    &-block
+        position: relative
+        display: flex
+    &-navbar
+        display: flex
+        width: 811px
+        justify-content: space-between
+        &__logo
+            font-family: Inter
+            font-weight: 400
+            font-size: 18px
+            color: #000000
+        &__list
+            list-style-type: none
+            display: flex
+            height: 27px
+            &_link
+                position: relative
+                height: 100%
+                margin-right: 30px
+                text-transform: uppercase
+                &:nth-child(2)
+                    a
+                        &::after
+                            display: none
+                &::before
+                    content: ''
+                    position: absolute
+                    display: block
+                    height: 5px
+                    width: 100%
+                    background-color: $main-color
+                    bottom: -6px 
+                    transition: .6s
+                    transform: scaleX(0)
+                &:hover
+                    color: #323642
+                    &::before
+                        transform: scaleX(1)
+                &_active
+                    &::before
+                        content: ''
+                        position: absolute
+                        display: block
+                        height: 5px
+                        width: 100%
+                        background-color: $main-color
+                        bottom: -6px 
+                        transition: .6s
+                        transform: scaleX(1)   
+        &__link
+            position: relative
+            font-family: Roboto
+            font-weight: 500
+            font-size: 14px
+            color: #323642
+            text-decoration: none 
+            transition: .3s
+            &::after
+                content: ''
+                display: inline-block
+                height: 5px
+                width: 10px
+                margin: 0 0 2px 9px
+                background: url('../icons/down.png')  
+        &__btns
+            position: absolute
+            display: flex
+            right: -140px
+            top: 50%
+            transform: translateY(-50%)
+.sub-menu
+    display: none
+    top: 33px
+    position: absolute
+    width: 100px
+    li
+        background-color: #fff
+        padding: 10px 20px
+        border: 1px solid #d7d8d9
+        transition: .3s
+        &:hover
+            background-color: $main-color
+            a
+                color: white
+        a
+            display: flex
+            justify-content: center
+            height: 100%
+            font-family: Roboto
+            font-weight: 500
+            font-size: 14px
+            color: #323642
+            text-decoration: none 
+
+.menu-navbar__list_link:hover
+    ul
+        display: block
+.hamburger
+    margin-right: 24px
+    border: none
+    background: none
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    padding: 0
+    height: 16px
+    min-width: 24px
+    span
+        
+        width: 100%
+        height: 2px
+        background-color: #22252E
+
+
+            
+                        
+       
